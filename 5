@@ -1,0 +1,15 @@
+fn main() {
+    // a. Implicit type declaration (Rust infers the type)
+    let a = 10;           // Inferred as i32
+    let b = 3.14;         // Inferred as f64
+    let c = "Hello";      // Inferred as &str
+
+    println!("Implicit: a = {}, b = {}, c = {}", a, b, c);
+
+    // b. Explicit type declaration
+    let x: i32 = 20;
+    let y: f32 = 6.28;
+    let z: &str = "Rust";
+
+    println!("Explicit: x = {}, y = {}, z = {}", x, y, z);
+}
