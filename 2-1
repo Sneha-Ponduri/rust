@@ -1,0 +1,19 @@
+fn main() {
+    let int_val: i32 = 100;
+    let float_val: f64 = int_val as f64;  // Cast i32 to f64
+
+    println!("Integer value: {}", int_val);
+    println!("Float value (after casting): {}", float_val);
+
+    let char_val: char = 'A';
+    let char_to_int = char_val as u8;  // Cast char to u8 (ASCII code)
+
+    println!("Character: {}", char_val);
+    println!("Character as integer (ASCII): {}", char_to_int);
+
+    let large_number: u16 = 300;
+    let small_number = large_number as u8;  // Cast u16 to u8 (may truncate)
+
+    println!("Large number (u16): {}", large_number);
+    println!("Small number (u8) after casting (truncated): {}", small_number);
+}
