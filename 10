@@ -1,0 +1,14 @@
+fn main() {
+    // Declaring a String object directly
+    let mut s1 = String::new();  // Creates an empty String
+    s1.push_str("Hello");        // Add text to the String
+    println!("s1: {}", s1);
+
+    // Converting a string literal (&str) to a String object
+    let s2 = "World".to_string();  // Converts &str to String
+    println!("s2: {}", s2);
+
+    // Another way to create a String from literal
+    let s3 = String::from("Rust");
+    println!("s3: {}", s3);
+}
