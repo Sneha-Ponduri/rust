@@ -1,0 +1,20 @@
+fn main() {
+    let x = 5; // Original variable in outer scope
+    println!("Outer x = {}", x); // Prints 5
+
+    {
+        // Start of inner scope
+        let x = x + 10; // Shadowing x in inner scope
+        println!("Inner x (shadowed) = {}", x); // Prints 15
+
+        let y = 20; // Variable y only exists in this scope
+        println!("Inner y = {}", y);
+    } // End of inner scope, y goes out of scope, inner x ends
+
+    // y is not accessible here
+    println!("Outer x again = {}", x); // Still prints 5
+
+    // Shadowing outer x with a new value
+    let x = x * 2;
+    println!("Outer x after shadowing = {}", x); // Prints 10
+}
