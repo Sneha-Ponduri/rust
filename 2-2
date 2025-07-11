@@ -1,0 +1,16 @@
+fn main() {
+    let mut num = 10;
+
+    // Borrowing: create a reference to num (immutable)
+    let ref_num = &num;
+    println!("Borrowed value (immutable reference): {}", ref_num);
+
+    // Borrowing: create a mutable reference to num
+    let ref_mut_num = &mut num;
+    *ref_mut_num += 5;  // Dereferencing and modifying the value through mutable reference
+
+    println!("Value after modification through mutable reference: {}", num);
+
+    // Dereferencing: access the value behind the reference explicitly
+    println!("Dereferenced value: {}", *ref_num);
+}
